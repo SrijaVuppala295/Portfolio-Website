@@ -169,6 +169,9 @@ export default {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'grid-pattern': 'linear-gradient(to right, rgba(0, 255, 127, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 255, 127, 0.1) 1px, transparent 1px)',
 				'neon-glow': 'linear-gradient(90deg, rgba(0, 255, 127, 0) 0%, rgba(0, 255, 127, 0.2) 50%, rgba(0, 255, 127, 0) 100%)',
+			},
+			fontFamily: {
+				inter: ['Inter', 'sans-serif'],
 			}
 		}
 	},

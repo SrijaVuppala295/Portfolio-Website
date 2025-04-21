@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Github, ExternalLink, Youtube } from 'lucide-react';
 
@@ -12,6 +11,7 @@ type Project = {
   youtube?: string;
   techStack: string[];
   category: 'web' | 'ml' | 'dl' | 'ai';
+  colab?: string;
 };
 
 const projects: Project[] = [
@@ -74,7 +74,7 @@ const projects: Project[] = [
     description: "An image classification model trained on ImageNet dataset using CNNs to identify objects in images with high accuracy.",
     image: "https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=800&h=500",
     github: "https://github.com/yourusername/image-classifier",
-    youtube: "https://youtube.com/watch?v=example1",
+    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_image_classifier",
     techStack: ["Python", "TensorFlow", "Keras", "NumPy", "Matplotlib"],
     category: "ml"
   },
@@ -84,7 +84,7 @@ const projects: Project[] = [
     description: "A NLP-based sentiment analysis tool for analyzing customer reviews and feedback. Includes visualization dashboard.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
     github: "https://github.com/yourusername/sentiment-analysis",
-    live: "https://sentiment.example.com",
+    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_sentiment_analysis",
     techStack: ["Python", "NLTK", "scikit-learn", "Flask", "React"],
     category: "ml"
   },
@@ -94,6 +94,7 @@ const projects: Project[] = [
     description: "Time series forecasting model for stock price prediction using LSTM networks and historical market data.",
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&h=500",
     github: "https://github.com/yourusername/stock-predictor",
+    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_stock_predictor",
     techStack: ["Python", "Pandas", "TensorFlow", "Matplotlib", "Yahoo Finance API"],
     category: "ml"
   },
@@ -103,7 +104,7 @@ const projects: Project[] = [
     description: "A collaborative filtering-based recommendation system for suggesting products based on user behavior and preferences.",
     image: "https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=800&h=500",
     github: "https://github.com/yourusername/recommendation-system",
-    youtube: "https://youtube.com/watch?v=example2",
+    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_recommendation_system",
     techStack: ["Python", "TensorFlow", "Surprise", "NumPy", "Flask"],
     category: "ml"
   },
@@ -113,6 +114,7 @@ const projects: Project[] = [
     description: "Machine learning model for detecting anomalies in network traffic data to identify potential security threats.",
     image: "https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=800&h=500",
     github: "https://github.com/yourusername/anomaly-detection",
+    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_anomaly_detection",
     techStack: ["Python", "scikit-learn", "Pandas", "Matplotlib", "Seaborn"],
     category: "ml"
   },
@@ -124,7 +126,7 @@ const projects: Project[] = [
     description: "Implementation of neural style transfer algorithm to apply artistic styles to images using VGG19 network.",
     image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=800&h=500",
     github: "https://github.com/yourusername/neural-style-transfer",
-    youtube: "https://youtube.com/watch?v=example3",
+    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_neural_style_transfer",
     techStack: ["Python", "TensorFlow", "Keras", "OpenCV", "NumPy"],
     category: "dl"
   },
@@ -134,7 +136,7 @@ const projects: Project[] = [
     description: "Real-time object detection system using YOLO algorithm for identifying and tracking objects in video streams.",
     image: "https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=800&h=500",
     github: "https://github.com/yourusername/object-detection",
-    youtube: "https://youtube.com/watch?v=example4",
+    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_object_detection",
     techStack: ["Python", "PyTorch", "OpenCV", "CUDA", "Darknet"],
     category: "dl"
   },
@@ -144,7 +146,7 @@ const projects: Project[] = [
     description: "Sequence-to-sequence model for language translation using attention mechanism and Transformer architecture.",
     image: "https://images.unsplash.com/photo-1544163871-71163c8e13e0?auto=format&fit=crop&w=800&h=500",
     github: "https://github.com/yourusername/language-translation",
-    live: "https://translate.example.com",
+    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_language_translation",
     techStack: ["Python", "TensorFlow", "Hugging Face", "NLTK"],
     category: "dl"
   },
@@ -154,7 +156,7 @@ const projects: Project[] = [
     description: "Implementation of Generative Adversarial Networks for creating realistic synthetic images from noise.",
     image: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=800&h=500",
     github: "https://github.com/yourusername/gans-image-generation",
-    youtube: "https://youtube.com/watch?v=example5",
+    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_gans_image_generation",
     techStack: ["Python", "PyTorch", "NumPy", "Matplotlib", "CUDA"],
     category: "dl"
   },
@@ -164,6 +166,7 @@ const projects: Project[] = [
     description: "Deep learning-based speech recognition system using recurrent neural networks and spectrograms.",
     image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=800&h=500",
     github: "https://github.com/yourusername/speech-recognition",
+    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_speech_recognition",
     techStack: ["Python", "TensorFlow", "Librosa", "SoundFile", "NumPy"],
     category: "dl"
   },
@@ -176,13 +179,13 @@ const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&h=500",
     github: "https://github.com/yourusername/health-assistant",
     live: "https://health-ai.example.com",
-    youtube: "https://youtube.com/watch?v=example6",
+    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_health_assistant",
     techStack: ["Python", "TensorFlow", "Flask", "React", "NLP", "MongoDB"],
     category: "ai"
   },
 ];
 
-const ProjectCard = ({ project }: { project: Project }) => {
+const ProjectCard = ({ project }: { project: Project & { colab?: string } }) => {
   return (
     <div className="glass h-full group">
       <div className="overflow-hidden relative">
@@ -210,6 +213,17 @@ const ProjectCard = ({ project }: { project: Project }) => {
               rel="noopener noreferrer" 
               className="p-2 bg-dark/80 rounded-full hover:bg-neon-green hover:text-dark transition-colors"
               aria-label={`View ${project.title} live demo`}
+            >
+              <ExternalLink size={20} />
+            </a>
+          )}
+          {project.colab && (
+            <a 
+              href={project.colab}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-dark/80 rounded-full hover:bg-neon-green hover:text-dark transition-colors"
+              aria-label={`Open ${project.title} in Google Colab`}
             >
               <ExternalLink size={20} />
             </a>
