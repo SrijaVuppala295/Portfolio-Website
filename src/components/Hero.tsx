@@ -1,13 +1,37 @@
+
 import { useEffect, useState } from 'react';
 import { ArrowDown } from 'lucide-react';
+
+// Example tech stack images
+const techStack = [
+  {
+    name: "React",
+    src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+  },
+  {
+    name: "TypeScript",
+    src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+  },
+  {
+    name: "Python",
+    src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+  },
+  {
+    name: "MongoDB",
+    src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg"
+  },
+  {
+    name: "GitHub",
+    src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
+  }
+];
 
 const Hero = () => {
   const [typedText, setTypedText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
 
-  const textToType = "Full-Stack Developer | ML Engineer | Open Source Contributor";
+  const textToType = "Full-Stack Developer | ML Enthusiast | Open Source Learner";
 
-  // Typing animation effect
   useEffect(() => {
     let currentIndex = 0;
     const typingInterval = setInterval(() => {
@@ -17,14 +41,13 @@ const Hero = () => {
       } else {
         clearInterval(typingInterval);
 
-        // Keep cursor blinking after typing is complete
         const cursorInterval = setInterval(() => {
           setShowCursor(prev => !prev);
         }, 500);
 
         return () => clearInterval(cursorInterval);
       }
-    }, 80);
+    }, 70);
 
     return () => clearInterval(typingInterval);
   }, []);
@@ -36,53 +59,49 @@ const Hero = () => {
     >
       {/* Animated background grid */}
       <div className="absolute inset-0 bg-grid-pattern bg-[length:40px_40px] opacity-20"></div>
-
       {/* Glowing orb effects */}
       <div className="absolute top-1/4 -left-20 w-64 h-64 bg-neon-green/10 rounded-full blur-[80px]"></div>
       <div className="absolute bottom-1/4 -right-20 w-64 h-64 bg-neon-green/10 rounded-full blur-[80px]"></div>
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           {/* Text content */}
           <div className="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-playfair">
               <span className="block">Hi, I'm</span>
-              <span className="block text-neon-green neon-text-animated mt-2">Developer Name</span>
+              <span className="block text-neon-green neon-text-animated mt-2 font-playfair">Developer Name</span>
             </h1>
-
-            <div className="text-xl md:text-2xl font-mono mb-8 h-8">
+            <div className="text-xl md:text-2xl font-mono mb-4 h-8">
               <span>{typedText}</span>
               <span className={`inline-block w-2 h-5 ml-1 bg-neon-green ${showCursor ? 'opacity-100' : 'opacity-0'}`}></span>
             </div>
-
             <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0">
-              Building innovative solutions across web development and machine learning.
-              Open source enthusiast and continuous learner focused on creating impactful
-              technology.
+              Building solutions in web development &amp; ML. Open source explorer and continuous learner.
             </p>
-
+            {/* Tech stack images */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-6">
+              {techStack.map(({ name, src }) => (
+                <img
+                  key={name}
+                  src={src}
+                  alt={name}
+                  title={name}
+                  className="w-10 h-10 object-contain bg-dark rounded shadow hover-scale"
+                  style={{ background: "#222" }}
+                />
+              ))}
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a
-                href="#projects"
-                className="btn btn-primary"
-              >
+              <a href="#achievements" className="btn btn-primary">
+                View Achievements
+              </a>
+              <a href="#projects" className="btn btn-outline">
                 View Projects
               </a>
-              <a
-                href="#contact"
-                className="btn btn-outline"
-              >
+              <a href="#contact" className="btn btn-outline">
                 Get In Touch
-              </a>
-              <a
-                href="#achievements"
-                className="btn btn-outline"
-              >
-                View Achievements
               </a>
             </div>
           </div>
-
           {/* Anime girl working, single image, centered */}
           <div className="lg:w-1/2 flex justify-center">
             <div className="relative w-full max-w-md">
@@ -96,12 +115,14 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        {/* Scroll down indicator fixed for overflow */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
-          <a href="#about" className="flex flex-col items-center text-neon-green">
-            <span className="mb-2 text-sm">Scroll Down</span>
-            <ArrowDown size={20} />
-          </a>
+        {/* Scroll down indicator (place below all content) */}
+        <div className="w-full flex justify-center z-20">
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" className="flex flex-col items-center text-neon-green">
+              <span className="mb-2 text-sm">Scroll Down</span>
+              <ArrowDown size={20} />
+            </a>
+          </div>
         </div>
       </div>
     </section>
