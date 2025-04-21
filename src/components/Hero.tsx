@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { ArrowDown } from 'lucide-react';
 
@@ -115,11 +116,11 @@ const Hero = () => {
           {/* Anime character with floating animation */}
           <div className="lg:w-1/2 flex justify-center">
             <div className="relative w-full max-w-md">
-              {/* Main character image */}
+              {/* Main character image - anime girl working */}
               <div className="animate-float rounded-2xl overflow-hidden neon-border-animated">
                 <img 
-                  src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=800" 
-                  alt="Anime character representing developer"
+                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=800"
+                  alt="Anime girl working at a computer"
                   className="w-full h-auto rounded-xl"
                 />
               </div>
