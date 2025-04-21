@@ -24,13 +24,18 @@ const techStack = [
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
   },
   {
-    name: "Google Colab",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecolab/googlecolab-original.svg",
+    name: "React.js",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
+  {
+    name: "Next.js",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   },
 ];
 
+
 const roles = [
-  "Full Stack Web Dev",
+  "Full Stack Web Developer",
   "Machine Learning Enthusiast",
   "Open Source Contributor"
 ];
@@ -45,8 +50,8 @@ const Hero = () => {
   const [typingRole, setTypingRole] = useState(true);
 
   // Main subtitle to type out after the animated role
-  const mainSubtitle =
-    "Building with Node.js, Express.js, HTML, CSS & JS | Exploring Google Colab";
+  // const mainSubtitle =
+  //   "Building with Node.js, Express.js, HTML, CSS & JS | Exploring Google Colab";
 
   useEffect(() => {
     // Reveal animated role, one letter at a time
@@ -75,24 +80,24 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, [roleText, typingRole, roleIndex]);
 
-  // Main subtitle typing effect (runs once)
-  useEffect(() => {
-    let currentIndex = 0;
-    const typingInterval = setInterval(() => {
-      if (currentIndex <= mainSubtitle.length) {
-        setTypedText(mainSubtitle.substring(0, currentIndex));
-        currentIndex++;
-      } else {
-        clearInterval(typingInterval);
-        const cursorInterval = setInterval(() => {
-          setShowCursor((prev) => !prev);
-        }, 500);
-        return () => clearInterval(cursorInterval);
-      }
-    }, 40);
+  // // Main subtitle typing effect (runs once)
+  // useEffect(() => {
+  //   let currentIndex = 0;
+  //   const typingInterval = setInterval(() => {
+  //     if (currentIndex <= mainSubtitle.length) {
+  //       setTypedText(mainSubtitle.substring(0, currentIndex));
+  //       currentIndex++;
+  //     } else {
+  //       clearInterval(typingInterval);
+  //       const cursorInterval = setInterval(() => {
+  //         setShowCursor((prev) => !prev);
+  //       }, 500);
+  //       return () => clearInterval(cursorInterval);
+  //     }
+  //   }, 40);
 
-    return () => clearInterval(typingInterval);
-  }, []);
+  //   return () => clearInterval(typingInterval);
+  // }, []);
 
   return (
     <section
@@ -112,7 +117,7 @@ const Hero = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair mb-3 leading-snug">
               Hi, I'm{" "}
               <span className="block text-neon-green neon-text-animated font-playfair mt-2">
-                Your Name
+               Srija Vuppala
               </span>
             </h1>
             {/* Animated role text */}
@@ -127,18 +132,19 @@ const Hero = () => {
               </span>
             </div>
             {/* Main subtitle */}
-            <div className="text-base sm:text-xl md:text-2xl font-mono mb-4 mt-3 overflow-x-auto break-words whitespace-normal">
+            {/* <div className="text-base sm:text-xl md:text-2xl font-mono mb-4 mt-3 overflow-x-auto break-words whitespace-normal">
               <span>{typedText}</span>
               <span
                 className={`inline-block w-2 h-5 ml-1 bg-neon-green align-bottom transition-opacity duration-300 ${
                   showCursor ? "opacity-100" : "opacity-0"
                 }`}
               ></span>
-            </div>
+            </div> */}
             <p className="text-md sm:text-base md:text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0">
-              Always learning and building. Passionate about technology, teamwork,
-              and the open source community.
-            </p>
+  Always learning and building. Passionate about technology, teamwork,  
+  and the open source community. Continuously exploring new ideas and turning them into reality.
+</p>
+
             {/* Tech stack images */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-7 mt-2">
               {techStack.map(({ name, src }) => (
@@ -176,7 +182,7 @@ const Hero = () => {
             <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md">
               <div className="animate-float rounded-2xl overflow-hidden neon-border-animated mx-auto shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=800"
+                  src="/srij.png"
                   alt="Anime girl working at a computer"
                   className="w-full h-auto rounded-xl object-cover"
                   loading="lazy"

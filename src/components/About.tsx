@@ -11,19 +11,20 @@ const openSourceIntro = (
     </p>
   </div>
 );
-
 const openSourceContributions = [
   {
     id: 1,
-    title: "GSSoC'25",
-    period: "May 2025 - August 2025",
+    title: "GSSoC'24",
+    period: "May 2024 - Nov 2024",
     description:
-      "Contributed to multiple open-source projects as part of GirlScript Summer of Code 2025. Made significant improvements to documentation and added several new features.",
+      "Recognized as a top contributor in GirlScript Summer of Code 2024. Played a key role in driving feature development, code quality, and community support across multiple projects.",
     achievements: [
-      "Merged 20+ pull requests",
-      "Reviewed code for junior contributors",
-      "Added Typescript support to legacy Javascript projects",
-      "Improved test coverage by 30%",
+      "Top 8 contributor overall in GSSoC",
+      "Ranked 1st among all female contributors",
+      "Merged 200+ pull requests across 10+ repositories",
+      "Led code reviews and quality assurance efforts",
+      "Refactored legacy JavaScript codebases to TypeScript",
+      "Enhanced testing strategy, boosting coverage by 30%",
     ],
     link: "https://gssoc.girlscript.tech/",
     icon: Github,
@@ -33,12 +34,13 @@ const openSourceContributions = [
     title: "SWOC'25",
     period: "January 2025 - March 2025",
     description:
-      "Participated in Script Winter of Code 2025, focusing on backend development and API improvements for community projects.",
+      "Among the top contributors in Script Winter of Code 2025. Specialized in backend architecture, API design, and mentoring new contributors to foster an inclusive dev community.",
     achievements: [
-      "Built RESTful APIs with Express.js",
-      "Implemented authentication using JWT",
+      "Top 100 contributor in SWOC",
       "Fixed critical security vulnerabilities",
       "Mentored 5 newcomers to open source",
+      "Identified and resolved major backend security flaws",
+    
     ],
     link: "https://swoc.scriptindia.org/",
     icon: Github,
@@ -46,19 +48,21 @@ const openSourceContributions = [
   {
     id: 3,
     title: "Hacktoberfest'24",
-    period: "October 2024",
+    period: "October 2024 - November 2024",
     description:
-      "Successfully completed Hacktoberfest 2024 with quality contributions to multiple repositories focused on web technologies and machine learning.",
+      "Excelled during Hacktoberfest 2024 as a standout contributor across diverse repositories. Earned recognition and Holopin badges for meaningful and impactful contributions.",
     achievements: [
-      "Contributed to TensorFlow documentation",
-      "Fixed UI bugs in React applications",
+      "Ranked among top contributors with 40+ quality PRs",
       "Improved accessibility in open-source libraries",
-      "Added new machine learning visualizations",
+      "Resolved UI/UX issues in several React projects",
+     
+     
     ],
     link: "https://hacktoberfest.com/",
     icon: Github,
   },
 ];
+
 
 const About = () => {
   return (
@@ -104,7 +108,7 @@ const About = () => {
                   >
                     {/* Timeline dot for desktop */}
                     <div className="hidden md:block relative md:w-8 flex-shrink-0">
-                      <div className="absolute left-3 top-2 w-5 h-5 rounded-full bg-neon-green border-4 border-dark z-10"></div>
+                      <div className="absolute -left-2 top-2 w-5 h-5 rounded-full bg-neon-green border-4 border-dark z-10"></div>
                     </div>
                     {/* Card with details */}
                     <div
@@ -154,18 +158,21 @@ const About = () => {
           <div className="glass p-4 md:p-8 max-w-4xl mx-auto">
             <div className="bg-dark rounded-lg p-4 overflow-hidden">
               <img
-                src={`https://ghchart.rshah.org/00ff7f/yourusername`}
+                src={`https://ghchart.rshah.org/00ff7f/SrijaVuppala295`}
                 alt="GitHub Contribution Chart"
                 className="w-full h-auto"
               />
               <p className="text-xs text-center mt-2 text-muted-foreground">
-                Replace 'yourusername' with your actual GitHub username
+                SrijaVuppala295
               </p>
+              <p className="text-sm text-center text-neon-green font-semibold mt-1">
+        1,250+ contributions in the last year
+      </p>
             </div>
           </div>
           <div className="mt-8">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/SrijaVuppala295"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-outline"

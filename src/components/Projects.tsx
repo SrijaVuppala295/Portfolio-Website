@@ -15,159 +15,168 @@ type Project = {
 };
 
 const projects: Project[] = [
-  // Web Development Projects
   {
     id: 1,
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce platform with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800&h=500",
-    github: "https://github.com/yourusername/ecommerce-platform",
-    live: "https://ecommerce-demo.example.com",
-    techStack: ["React", "Node.js", "Express", "MongoDB", "Redux", "Stripe"],
+    title: "AI Career Coach - SensAI",
+    description: "An AI-powered career guidance platform that offers resume analysis, personalized job suggestions, and interview prep tools using NLP and ML models.",
+    image: "/banner.jpeg", // AI/tech themed
+    github: "https://github.com/SrijaVuppala295/SensAI",
+    // live: "https://sensai.example.com",
+    techStack: ["Next.js", "Node.js", "TailwindCSS","PrismaORM", "Gemini API", "NeonDB"],
     category: "web"
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates using Socket.io. Includes features like task assignment, priority setting, and progress tracking.",
-    image: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&w=800&h=500",
-    github: "https://github.com/yourusername/task-manager",
-    live: "https://task-app.example.com",
-    techStack: ["React", "TypeScript", "Node.js", "Socket.io", "PostgreSQL"],
+    title: "Charity & Fundraising Website - CompassionConnect",
+    description: "A platform to connect charities and donors with seamless fundraising tools, donation tracking, and community features.",
+    image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&h=500", // community/help theme
+    github: "https://github.com/SrijaVuppala295/Compassion-Connect",
+    // live: "https://compassionconnect.example.com",
+    techStack: ["Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
     category: "web"
   },
   {
     id: 3,
-    title: "Developer Portfolio",
-    description: "A modern, responsive developer portfolio website built with React and Tailwind CSS. Featuring dark mode, animations, and contact form.",
-    image: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?auto=format&fit=crop&w=800&h=500",
-    github: "https://github.com/yourusername/portfolio",
-    live: "https://yourusername.dev",
-    techStack: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
+    title: "Food Ordering Website - Tasteo",
+    description: "A responsive food ordering platform with real-time menu updates, location-based search, and secure checkout.",
+    image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&h=500", // food theme
+    github: "https://github.com/SrijaVuppala295/Tasteo-FoodOrderingWebsite",
+    // live: "https://tasteo.example.com",
+    techStack: ["HTML", "CSS", "JS", "Node.js", "Express.js", "MongoDB"],
     category: "web"
   },
   {
     id: 4,
-    title: "Real-time Chat Application",
-    description: "A real-time messaging platform with private and group chats. Features include message encryption, file sharing, and message history.",
-    image: "https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=800&h=500",
-    github: "https://github.com/yourusername/chat-app",
-    live: "https://chat.example.com",
-    techStack: ["React", "Firebase", "WebRTC", "Redux"],
+    title: "SharkEdge - Tech Driven Solutions for Client Success",
+    description: "A corporate tech consulting site offering solutions in AI, data analytics, and custom software development for enterprise clients.",
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&h=500", // corporate tech
+    github: "https://github.com/SrijaVuppala295/SharkEdge-Media",
+    live: "https://sharkedge.media",
+    techStack: ["HTML","React", "TypeScript", "TailwindCSS", "Shadcn", "Node.js"],
     category: "web"
   },
   {
     id: 5,
-    title: "Blog & CMS",
-    description: "A fully-featured blog and content management system. Includes rich text editing, image uploads, categories, tags, and SEO optimization.",
-    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&h=500",
-    github: "https://github.com/yourusername/blog-cms",
-    live: "https://blog.example.com",
-    techStack: ["Next.js", "GraphQL", "Prisma", "PostgreSQL", "AWS S3"],
+    title: "AI Finance Platform - Welth (ONGOING PROJECT)",
+    description: " An intelligent finance assistant for portfolio tracking, expense management, and personalized investment tips. Currently in development.",
+    image: "/banner (1).jpeg", 
+    github: "https://github.com/yourusername/welth",
+    // live: "https://welth.example.com",
+    techStack: ["Next.js", "Node.js", "TailwindCSS","PrismaORM", "Gemini API", "NeonDB"],
     category: "web"
   },
   
   // Machine Learning Projects
   {
     id: 6,
-    title: "Image Classification Model",
-    description: "An image classification model trained on ImageNet dataset using CNNs to identify objects in images with high accuracy.",
-    image: "https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=800&h=500",
-    github: "https://github.com/yourusername/image-classifier",
-    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_image_classifier",
-    techStack: ["Python", "TensorFlow", "Keras", "NumPy", "Matplotlib"],
+    title: "Sonar Rock vs Mine Classifier",
+    description: "A binary classification model to differentiate between sonar signals bounced off rocks and mines using a neural network.",
+    image: "/rock.jpg", // sonar/waves/ocean
+    github: "https://github.com/SrijaVuppala295/Sonar-rock-vs-Mine",
+    // colab: "https://colab.research.google.com/drive/your_colab_notebook_id_sonar",
+    techStack: ["Python", "scikit-learn", "NumPy", "Matplotlib", "Pandas","Logistic Regression"],
     category: "ml"
   },
   {
     id: 7,
-    title: "Sentiment Analysis Tool",
-    description: "A NLP-based sentiment analysis tool for analyzing customer reviews and feedback. Includes visualization dashboard.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
-    github: "https://github.com/yourusername/sentiment-analysis",
-    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_sentiment_analysis",
-    techStack: ["Python", "NLTK", "scikit-learn", "Flask", "React"],
+    title: "Credit Card Fraud Detection",
+    description: "A machine learning model to detect fraudulent transactions using anomaly detection and classification techniques on imbalanced data.",
+    image: "credit.jpeg", // finance/security theme
+    github: "https://github.com/SrijaVuppala295/Credit-Card-Fraud-Detection",
+    // colab: "https://colab.research.google.com/drive/your_colab_notebook_id_fraud_detection",
+    techStack: ["Python", "Pandas", "scikit-learn","Matplotlib", "Seaborn","Logistic Regression"],
     category: "ml"
   },
   {
     id: 8,
-    title: "Stock Price Predictor",
-    description: "Time series forecasting model for stock price prediction using LSTM networks and historical market data.",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&h=500",
-    github: "https://github.com/yourusername/stock-predictor",
-    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_stock_predictor",
-    techStack: ["Python", "Pandas", "TensorFlow", "Matplotlib", "Yahoo Finance API"],
+    title: "Heart Disease Prediction",
+    description: "A predictive analytics model that uses patient health indicators to assess the risk of heart disease.",
+    image: "heart.jpeg", // healthcare theme
+    github: "https://github.com/SrijaVuppala295/Heart-Disease-Prediction",
+    // colab: "https://colab.research.google.com/drive/your_colab_notebook_id_heart",
+    techStack: ["Python", "scikit-learn", "Pandas", "Logistic Regression", "Matplotlib"],
     category: "ml"
   },
   {
     id: 9,
-    title: "Recommendation System",
-    description: "A collaborative filtering-based recommendation system for suggesting products based on user behavior and preferences.",
-    image: "https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=800&h=500",
-    github: "https://github.com/yourusername/recommendation-system",
-    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_recommendation_system",
-    techStack: ["Python", "TensorFlow", "Surprise", "NumPy", "Flask"],
+    title: "House Price Prediction",
+    description: "A regression model that estimates house prices based on multiple features like area, location, and number of bedrooms.",
+    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&h=500", // real estate/home
+    github: "https://github.com/SrijaVuppala295/House-Price-Prediction",
+    // colab: "https://colab.research.google.com/drive/your_colab_notebook_id_house",
+    techStack: ["Python", "Pandas", "scikit-learn", "XGBoost", "Seaborn"],
     category: "ml"
   },
   {
     id: 10,
-    title: "Anomaly Detection System",
-    description: "Machine learning model for detecting anomalies in network traffic data to identify potential security threats.",
-    image: "https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=800&h=500",
-    github: "https://github.com/yourusername/anomaly-detection",
-    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_anomaly_detection",
-    techStack: ["Python", "scikit-learn", "Pandas", "Matplotlib", "Seaborn"],
+    title: "Movie Recommendation System",
+    description: "A hybrid recommendation system using collaborative filtering and content-based filtering to suggest movies users might love.",
+    image: "movie.webp", // cinema/movie theme
+    github: "https://github.com/SrijaVuppala295/Movie-Recommendation-System",
+    // colab: "https://colab.research.google.com/drive/your_colab_notebook_id_movie",
+    techStack: ["Python", "Pandas", "Numpy", "scikit-learn", "Cosine Similarity Algorithm"],
     category: "ml"
-  },
+  },  
   
   // Deep Learning Projects
   {
     id: 11,
-    title: "Neural Style Transfer",
-    description: "Implementation of neural style transfer algorithm to apply artistic styles to images using VGG19 network.",
-    image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=800&h=500",
-    github: "https://github.com/yourusername/neural-style-transfer",
-    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_neural_style_transfer",
-    techStack: ["Python", "TensorFlow", "Keras", "OpenCV", "NumPy"],
+    title: "Breast Cancer Detection",
+    description: "A CNN-based model for classifying histopathology images to assist in early breast cancer diagnosis.",
+    image: "breast.png", // medical imagery
+    github: "https://github.com/SrijaVuppala295/Breast-Cancer-Detection",
+    // colab: "https://colab.research.google.com/drive/your_colab_notebook_id_breast_cancer",
+    techStack: ["Python", "TensorFlow", "Keras", "DeepLearning", "Pandas"],
     category: "dl"
   },
   {
     id: 12,
-    title: "Object Detection System",
-    description: "Real-time object detection system using YOLO algorithm for identifying and tracking objects in video streams.",
-    image: "https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=800&h=500",
-    github: "https://github.com/yourusername/object-detection",
-    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_object_detection",
-    techStack: ["Python", "PyTorch", "OpenCV", "CUDA", "Darknet"],
+    title: "Potato Disease Classification",
+    description: "Deep learning model to detect and classify common potato plant diseases using leaf image data.",
+    image: "/potato.jpg", // agriculture/plants
+    github: "https://github.com/SrijaVuppala295/Potato-Disease-Detection",
+    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_potato_disease",
+    techStack: ["Python", "Keras", "TensorFlow", "DeepLearning", "Matplotlib"],
     category: "dl"
   },
   {
     id: 13,
-    title: "Language Translation Model",
-    description: "Sequence-to-sequence model for language translation using attention mechanism and Transformer architecture.",
-    image: "https://images.unsplash.com/photo-1544163871-71163c8e13e0?auto=format&fit=crop&w=800&h=500",
-    github: "https://github.com/yourusername/language-translation",
-    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_language_translation",
-    techStack: ["Python", "TensorFlow", "Hugging Face", "NLTK"],
+    title: "CIFAR-10 Image Classifier",
+    description: "A convolutional neural network built to classify images from the CIFAR-10 dataset into 10 different categories.",
+    image: "/cifar.jpeg", // toy blocks, object category
+    github: "https://github.com/SrijaVuppala295/CIFAR-10-Object-Recognition",
+    // colab: "https://colab.research.google.com/drive/your_colab_notebook_id_cifar10",
+    techStack: ["Python", "TensorFlow", "Keras", "NumPy", "Matplotlib"],
     category: "dl"
   },
+  // {
+  //   id: 14,
+  //   title: "MNIST Digit Recognizer",
+  //   description: "A simple and effective CNN trained on the MNIST dataset to recognize handwritten digits in real-time.",
+  //   image: "/mnist.png", // handwriting
+  //   github: "https://github.com/yourusername/mnist-digit-recognition",
+  //   colab: "https://colab.research.google.com/drive/your_colab_notebook_id_mnist",
+  //   techStack: ["Python", "Keras", "TensorFlow", "NumPy", "Matplotlib"],
+  //   category: "dl"
+  // },
   {
     id: 14,
-    title: "GANs for Image Generation",
-    description: "Implementation of Generative Adversarial Networks for creating realistic synthetic images from noise.",
-    image: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=800&h=500",
-    github: "https://github.com/yourusername/gans-image-generation",
-    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_gans_image_generation",
-    techStack: ["Python", "PyTorch", "NumPy", "Matplotlib", "CUDA"],
+    title: "Face Mask Detection",
+    description: "Real-time face mask detection system using deep learning and DeepLearning to enhance public safety measures.",
+    image: "/face.jpeg", // face mask
+    github: "https://github.com/SrijaVuppala295/Face-Mask-Detection",
+    // colab: "https://colab.research.google.com/drive/your_colab_notebook_id_mask_detection",
+    techStack: ["Python", "TensorFlow", "DeepLearning", "Keras", "Haar Cascades"],
     category: "dl"
   },
   {
     id: 15,
-    title: "Speech Recognition System",
-    description: "Deep learning-based speech recognition system using recurrent neural networks and spectrograms.",
-    image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=800&h=500",
-    github: "https://github.com/yourusername/speech-recognition",
-    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_speech_recognition",
-    techStack: ["Python", "TensorFlow", "Librosa", "SoundFile", "NumPy"],
+    title: "Dog vs Cat Image Classifier",
+    description: "A convolutional neural network trained to distinguish between dog and cat images with high accuracy using Kaggle dataset.",
+    image: "/dog.jpeg", // dog and cat
+    github: "https://github.com/SrijaVuppala295/Dog-vs-Cat-Classifier",
+    // colab: "https://colab.research.google.com/drive/your_colab_notebook_id_dog_vs_cat",
+    techStack: ["Python", "TensorFlow", "Keras", "Deep Learning", "NumPy"],
     category: "dl"
   },
   
@@ -177,10 +186,10 @@ const projects: Project[] = [
     title: "AI Health Assistant",
     description: "An AI-powered health assistant that provides personalized health recommendations, medication reminders, and symptom analysis.",
     image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&h=500",
-    github: "https://github.com/yourusername/health-assistant",
-    live: "https://health-ai.example.com",
-    colab: "https://colab.research.google.com/drive/your_colab_notebook_id_health_assistant",
-    techStack: ["Python", "TensorFlow", "Flask", "React", "NLP", "MongoDB"],
+    github: "https://github.com/SrijaVuppala295/AI-Health-Assistant",
+    // live: "https://health-ai.example.com",
+    // colab: "https://colab.research.google.com/drive/your_colab_notebook_id_health_assistant",
+    techStack: ["Python"],
     category: "ai"
   },
 ];

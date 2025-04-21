@@ -19,16 +19,16 @@ const Header = () => {
   const navLinks = [
     { name: 'About', href: '#about' },
     { name: 'Achievements', href: '#achievements' },
-    { name: 'Experience', href: '#experience' },
+    // { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Skills', href: '#skills' },
+    // { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' }
   ];
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/yourusername', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://instagram.com/yourusername', label: 'Instagram' }
+    { icon: Github, href: 'https://github.com/SrijaVuppala295', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/srijavuppala02/', label: 'LinkedIn' },
+    // { icon: Instagram, href: 'https://instagram.com/yourusername', label: 'Instagram' }
   ];
 
   return (

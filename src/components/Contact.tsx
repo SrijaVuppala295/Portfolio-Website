@@ -26,18 +26,44 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus({ status: 'sending', message: "Sending your message..." });
-    setTimeout(() => {
-      setFormStatus({ status: 'success', message: "Thank you for reaching out!" });
-      setFormData({
-        name: '',
-        email: '',
-        message: ''
+  
+    try {
+      // Create URL parameters from form data
+      const formParams = new URLSearchParams();
+      Object.entries(formData).forEach(([key, value]) => {
+        formParams.append(key, value);
       });
-    }, 900);
+  
+      const response = await fetch("https://script.google.com/macros/s/AKfycbwwcUZeewE2kvHAPPxH_9XjQV0tTHCxZjwLCb8I1KvVyB-4A99se7JLSS1pgP3xkIRJhg/exec", {
+        method: "POST",
+        body: formParams,
+        // Remove the Content-Type header to let it default to application/x-www-form-urlencoded
+      });
+  
+      const result = await response.json();
+  
+      if (result.result === "success") {
+        setFormStatus({ status: 'success', message: result.message });
+        setFormData({ name: '', email: '', message: '' });
+  
+        setTimeout(() => {
+          setFormStatus({ status: 'idle', message: '' });
+        }, 5000);
+      } else {
+        throw new Error("Failed to submit");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      setFormStatus({ 
+        status: 'error', 
+        message: error.message || "Something went wrong. Try again!" 
+      });
+    }
   };
+  
 
   return (
     <section id="contact" className="py-20">
@@ -118,7 +144,7 @@ const Contact = () => {
               href="mailto:your.email@example.com"
               className="inline-flex items-center text-neon-green font-bold hover:underline"
             >
-              your.email@example.com
+             srijavuppala295@gmail.com
             </a>
             <div className="text-sm text-muted-foreground">
               I aim to reply within 24 hours!

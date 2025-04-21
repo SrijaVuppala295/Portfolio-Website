@@ -14,7 +14,7 @@ const Footer = () => {
           
           <div className="flex space-x-6 mb-8">
             <a 
-              href="https://github.com/yourusername" 
+              href="https://github.com/SrijaVuppala295" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-neon-green transition-colors"
@@ -23,7 +23,7 @@ const Footer = () => {
               <Github size={20} />
             </a>
             <a 
-              href="https://linkedin.com/in/yourusername" 
+              href="https://www.linkedin.com/in/srijavuppala02/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-neon-green transition-colors"
@@ -32,7 +32,7 @@ const Footer = () => {
               <Linkedin size={20} />
             </a>
             <a 
-              href="https://twitter.com/yourusername" 
+              href="https://x.com/vuppala_srija" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-neon-green transition-colors"
@@ -40,7 +40,7 @@ const Footer = () => {
             >
               <Twitter size={20} />
             </a>
-            <a 
+            {/* <a 
               href="https://instagram.com/yourusername" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -48,21 +48,19 @@ const Footer = () => {
               aria-label="Instagram"
             >
               <Instagram size={20} />
-            </a>
-            <a 
-              href="mailto:your.email@example.com" 
+            </a> */}
+            {/* <a 
+              href="srijavuppala295@gmail.com" 
               className="text-muted-foreground hover:text-neon-green transition-colors"
               aria-label="Email"
             >
               <Mail size={20} />
-            </a>
+            </a> */}
           </div>
           
           <div className="text-center text-muted-foreground">
             <p className="mb-2">© {new Date().getFullYear()} Developer Portfolio. All rights reserved.</p>
-            <p className="text-sm">
-              Built with React, TypeScript, Tailwind CSS, and D3.js
-            </p>
+            
           </div>
         </div>
       </div>

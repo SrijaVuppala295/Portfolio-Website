@@ -6,22 +6,22 @@ const achievements = [
     title: "Ranked #1 (Girls) & 8th Globally - GSSoC'25",
     description: "Secured the top rank among girls and placed 8th overall globally in GirlScript Summer of Code 2025 after consistent open-source contributions.",
     icon: Medal,
-    date: "Aug 2025",
-    link: "https://example.com/certificate-gssoc" // Replace with your actual certificate link
+    date: "Nov 2024",
+    link: "https://drive.google.com/file/d/1MhV4spndE6GY78kDpHMyWV44bEqwZ-W9/view?usp=sharing" // Replace with your actual certificate link
   },
   {
     title: "Top 100 Contributor - SWOC'25",
     description: "Achieved Top 100 status among all contributors worldwide during Script Winter of Code 2025, working on impactful technical projects.",
     icon: Award,
     date: "Mar 2025",
-    link: "https://example.com/certificate-swoc" // Replace with your actual certificate link
+    link: "https://drive.google.com/file/d/10HCfhZkBGMAFZvg9KtRkjV2dTl5772zU/view?usp=sharing" // Replace with your actual certificate link
   },
   {
     title: "Winner - Hackathons & Project Expo",
     description: "Won various hackathons and project expos for innovative solutions in web development and artificial intelligence.",
     icon: Trophy,
-    date: "2023—2025",
-    link: "https://example.com/certificate-hackathons" // Replace with your actual certificate link
+    date: "April 2025",
+    link: "https://drive.google.com/file/d/1SkDkBQkQLp16MPrTXkye4Imx4MmOxIA2/view?usp=sharing" // Replace with your actual certificate link
   }
 ];
 
