@@ -56,12 +56,12 @@ const About = () => {
       <div className="container mx-auto px-4">
         {/* Section header */}
         <div className="mb-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-playfair">About Me</h2>
           <div className="h-1 w-20 bg-neon-green mx-auto"></div>
         </div>
         
         {/* Personal information */}
-        <div className="mb-16">
+        <div className="mb-14">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-lg mb-6">
               I'm a passionate developer with expertise in both web development and machine learning. 
@@ -77,71 +77,49 @@ const About = () => {
         </div>
         
         <div className="mb-16">
-          <h3 className="text-2xl font-bold mb-8 text-center">Open Source Journey</h3>
+          <h3 className="text-2xl font-bold mb-8 text-center text-neon-green">Open Source Journey</h3>
           
-          {/* Timeline component */}
+          {/* Timeline component UI improved */}
           <div className="relative max-w-5xl mx-auto">
-            {/* Timeline line */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-neon-green/30"></div>
-            
-            {openSourceContributions.map((contribution, index) => (
-              <div 
-                key={contribution.id} 
-                className="relative mb-16 last:mb-0 md:flex"
-              >
-                {/* Timeline dot */}
-                <div className="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-neon-green transform -translate-x-1/2 mt-1.5 z-10"></div>
-                
-                {/* Date side */}
-                <div className={`md:w-1/2 pb-8 md:pb-0 ${index % 2 === 0 ? 'md:pr-12 text-right' : 'md:pl-12 md:order-last'}`}>
-                  <div className="flex items-center mb-2 justify-end md:justify-start">
-                    <Calendar size={16} className="text-neon-green mr-2" />
-                    <span className="text-neon-green font-mono text-sm">{contribution.period}</span>
-                  </div>
-                  
-                  <h4 className="text-xl font-bold mb-2">{contribution.title}</h4>
-                  <p className="text-muted-foreground mb-4">{contribution.description}</p>
-                  
-                  <ul className="list-disc list-inside text-sm space-y-1 mb-4 text-left">
-                    {contribution.achievements.map((achievement, i) => (
-                      <li key={i} className="text-muted-foreground">{achievement}</li>
-                    ))}
-                  </ul>
-                  
-                  <a 
-                    href={contribution.link} 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-neon-green hover:underline"
-                  >
-                    <contribution.icon size={16} className="mr-2" />
-                    View Project
-                  </a>
-                </div>
-                
-                {/* Content side */}
-                <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pl-12' : 'md:pr-12 text-right'}`}>
-                  <div className="glass p-6 animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
-                    <h4 className="text-xl font-bold text-neon-green mb-4">{contribution.title}</h4>
-                    <p className="text-sm mb-4">{contribution.description}</p>
-                    <div className="flex flex-wrap gap-2 justify-start">
-                      {Array.from({ length: Math.min(3, contribution.achievements.length) }).map((_, i) => (
-                        <span 
-                          key={i} 
-                          className="px-2 py-1 bg-neon-green/10 text-neon-green text-xs rounded-full"
-                        >
-                          {contribution.achievements[i].split(' ')[0]}
-                        </span>
-                      ))}
+            {/* Timeline vertical line */}
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-neon-green/20"></div>
+            <div className="flex flex-col gap-10">
+              {openSourceContributions.map((c, i) => (
+                <div
+                  key={c.id}
+                  className={`relative flex flex-col md:flex-row items-center md:items-stretch md:justify-between group`}
+                >
+                  {/* Timeline dot */}
+                  <div className="absolute left-4 md:left-1/2 w-5 h-5 rounded-full bg-neon-green border-4 border-dark z-10 -translate-x-1/2 mt-2"></div>
+                  {/* Card */}
+                  <div className={`md:w-[49%] bg-dark py-6 px-6 sm:px-8 rounded-2xl neon-border mb-4 md:mb-0 ${i % 2 === 0 ? 'order-2 md:order-1 md:text-right mr-auto md:pr-16 shadow-lg' : 'order-2 md:order-2 md:text-left ml-auto md:pl-16 shadow-lg'}`}>
+                    <div className="flex items-center gap-3 mb-2">
+                      <c.icon className="text-neon-green" size={20} />
+                      <span className="font-mono text-sm text-neon-green">{c.period}</span>
                     </div>
+                    <h4 className="text-xl font-bold text-neon-green mb-1">{c.title}</h4>
+                    <p className="text-muted-foreground mb-3 text-sm">{c.description}</p>
+                    <ul className="list-disc list-inside text-xs space-y-1 mb-2 text-muted-foreground">
+                      {c.achievements.map((ach, idx) => (
+                        <li key={idx}>{ach}</li>
+                      ))}
+                    </ul>
+                    <a
+                      href={c.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-neon-green hover:underline mt-1 font-bold"
+                    >
+                      <c.icon size={15} className="mr-1" /> View Project
+                    </a>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
         
-        {/* GitHub activity section */}
+        {/* GitHub activity section kept as before */}
         <div className="text-center mt-16">
           <h3 className="text-2xl font-bold mb-8">GitHub Activity</h3>
           <div className="glass p-4 md:p-8 max-w-4xl mx-auto">
