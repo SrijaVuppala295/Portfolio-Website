@@ -1,5 +1,5 @@
 
-import { Award, Medal, Trophy, Certificate } from "lucide-react";
+import { Award, Medal, Trophy, ExternalLink } from "lucide-react";
 
 const achievements = [
   {
@@ -56,7 +56,7 @@ const Achievements = () => (
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-neon-green hover:underline font-semibold transition"
               >
-                <Certificate size={16} /> View Certificate
+                <ExternalLink size={16} /> View Certificate
               </a>
             </div>
           </div>
